@@ -1,0 +1,51 @@
+i=insert mode; esc=normal mode;
+
+The basic moment keys
+h=<< j=VV k=^^ l=>>
+
+:q to quit
+:w to write
+:wq to write and quit or Shift+zz
+:q! quit without saving
+
+Basic Commands
+x=deletes character at the cursor
+w=Moves to start of the next word
+e=Moves to the end of the word
+b=moves to the begining of the word
+d=Delete in addition with w,e or $
+0=begining of the line
+$=end of the line
+u=undo changes
+p=paste
+r<t>=Replace current characte with <t>
+ce=change single word(will enter insert mode)
+c$=change from the point to end of line(will enter insert mode)
+gg or 1G=begining of the file
+<n>G=go to <n>th line
+
+Using repetition
+2e end of the 2nd word
+4w begining of the 4th word
+d3w delete 3 words 
+dd delete single line
+ndd delete n lines
+
+Searching
+/<text> search forward
+?<text> search Backward
+n next search
+N prev search
+
+Substitution
+:<i>,<j>s/<text1>/<text2>/<g><c>
+substitute from <i> to <j> lines 
+<text1> with <text2> 
+<g> all occurance
+<c> confirmation
+%s instead of <i>,<j>s to replace in whole text
+
+Advanced file options
+:w <filename> wites to the file
+v Enter visual mode and :w <filename> to save highlighted in the file
+:r <filename> retrives data from file
