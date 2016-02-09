@@ -1,0 +1,7 @@
+The installaiton is just one line 
+"curl -sf -L https://static.rust-lang.org/rustup.sh | sh"
+
+It can be uninstalled by running the script located at
+sudo /usr/local/lib/rustlib/uninstall.sh
+
+version checker-"rustc --version"

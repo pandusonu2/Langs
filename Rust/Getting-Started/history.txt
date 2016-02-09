@@ -1,0 +1,44 @@
+cd Getting-Started
+touch main.rs
+nano main.rs
+cat main.rs
+rustc main.rs
+./main
+cd ..
+subl rust.nanorc
+cd Getting-Started
+ls
+nano main.rs
+cd ..
+ls
+source rust.nanorc
+ls
+ls /usr/share/nano/
+sudo mv rust.nanorc /usr/share/nano/
+ls /usr/share/nano/
+gedit ~/.nanorc
+gedit ~/.nanorc
+cd Getting-Started
+nano main.rs
+mkdir src
+mv main.rs src src/
+mv main.rs src/
+mv main.rs src/main.rs
+ls
+ls src/
+rm main
+nano Cargo.toml
+cargo build
+./target/debug/hello_world
+cargo run
+cargo build --release
+ls
+tree
+cargo new hello_world2 --bin
+cd hello_world2
+tree
+git log
+cd ..
+ls
+tree
+exit
