@@ -1,0 +1,33 @@
+Creating a virtual environment
+    virtualenv newenv
+    source newenv/bin/activate
+Starting project
+	django-admin.py startproject <name>
+Starting server
+	python manage.py runserver
+python manage.py migrate-Sync apps to the database
+^creates db.sqlite3 file
+python manage.py syncdb(not in 1.9)
+^instead, python mange.py createsuperuser
+Start app-python manage.py startapp newsletter
+python manage.py makemigrations
+python manage.py migrate
+To get an page:
+  In app folder, views.py:
+    def home(request):
+      return render(request,"home.html",{})
+    settings.pym add 'appname' in templates
+    urls.py- url(r'^$',  'newsletter.views.home', name='home'),
+    All that points to app/templates/home.html
+Another method:
+  make "templates" folder in root directory
+  in settings.py: TEMPLATES, DIRS:[os.path.join(BASE_DIR,"templates")]
+MODELS:
+  modify app/models.py
+  makemigrations and migrate
+  modify app/admin.py "from .models import SignUp"
+Make and modify app/forms.py
+Modify views.py
+Stop after end of 13
+
+materialui
