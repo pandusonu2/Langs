@@ -66,4 +66,137 @@ hash={key1=>value1,key2=>value2,key3=>value3}
 print hash[key1]
 hash=Hash.new
 hash[key1]=value1
+hash.each do |x,y|
+	puts "#{x}: #{y}"
+end
+hash.each { |x, y| puts "#{x}: #{y}"}
+hash=Hash.new(0) #0 will be set as the default value
+frequencies=frequencies.sort_by { |x,y| y }
+frequencies.reverse!
 
+def <func name>
+	body
+end
+#Don't know array length, then do this
+def what_up(greeting, *bros)
+  bros.each { |bro| puts "#{greeting}, #{bro}!" }
+end
+what_up("What up", "Justin", "Ben", "Kevin Sorbo")
+
+arr.sort! #sorting
+
+<=> is used to compare
+sort overloading
+arr.sort! {|x,y| x<=>y}
+
+hash={:xyz=>1,:qwe=>2}
+#new syntax since 1.9
+hash={xyz: 1,qwe: 2}
+
+.object_id
+:this_is_a_symbol #immutable
+strings.each {|x| symbols.push(|x|.to_sym)}  #similarly .to_s and .intern is same as .to_sym
+
+Some program:
+==========
+require 'benchmark'o
+string_AZ = Hash[("a".."z").to_a.zip((1..26).to_a)]
+symbol_AZ = Hash[(:a..:z).to_a.zip((1..26).to_a)]
+string_time = Benchmark.realtime do
+  100_000.times { string_AZ["r"] }
+end
+symbol_time = Benchmark.realtime do
+  100_000.times { symbol_AZ[:r] }
+end
+puts "String time: #{string_time} seconds."
+puts "Symbol time: #{symbol_time} seconds."
+===============
+
+x=hash.select{|x,y| y>val}
+hash.each_key {|x| puts x}
+hash.each_value {|x| puts x}
+
+case choice
+when x
+	do stuff
+when y
+	do stuff
+when z then <do stuff>
+else
+	default
+end
+
+hash[key]==nil #to check existance
+.to_sym #to symbol 	.to_i #to integer
+deleting hash=== hash.delete(key)
+
+<statment> if <condition>    #single liner
+
+x.upto(y){|z| puts z} looping [x,y]
+(var).respond_to(:func_name)
+
+to push into array
+arr.push(x) "or" arr << x #works for strings too :)
+
+arr2 = arr.collect { |x| x*2}
+
+==================
+def block_test
+  puts "We're in the method!"
+  puts "Yielding to the block..."
+  yield
+  puts "We're back in the method!"
+end
+
+block_test { puts ">>> We're in the block!" }
+==================
+def yield_name(name)
+  puts "In the method! Let's yield."
+  yield("Kim")
+  puts "In between the yields!"
+  yield(name)
+  puts "Block complete! Back in the method."
+end
+
+yield_name("Eric") { |n| puts "My name is #{n}." }
+==================
+multiples_of_3 = Proc.new do |n|
+  n % 3 == 0
+end
+
+(1..100).to_a.select(&multiples_of_3)
+==================
+
+First, a lambda checks the number of arguments passed to it, while a proc does not. This means that a lambda will throw an error if you pass it the wrong number of arguments, whereas a proc will ignore unexpected arguments and assign nil to any that are missing.
+
+Second, when a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method.
+
+class xyz
+	def initialize(name)	#constructor
+		@name=name 			#instance vaiable 
+	end
+end
+var=xyz.new("xyz")			#creating instance
+$, @, or @@ as global, instance, and class variables
+
+#inheritence
+#class child < parent; end
+class child < parent 
+end
+
+for accessing override functions, just write super
+
+attr_reader :var
+attr_writer :var
+attr_accessor to get both the above
+
+#modules can't have instances like class
+module <name>
+end
+
+accessing value of module Math::PI
+
+require 'module'
+
+for getting a module in a class, use "include Math"
+"extend module" same as inheritance
