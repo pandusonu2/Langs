@@ -1,0 +1,58 @@
+Is it C? Is it Java? Is it JavaScript? No, its C#!!!!! 
+Hello World!!!
+
+using System;
+public class Hello
+{
+    public static void Main()
+    {
+        System.Console.WriteLine("Goodbye, World!");
+    }
+}
+
+Variables
+float requires special "f"
+int myInt = 1; float myFloat = 1f; bool myBoolean = true; string myName = "John"; char myChar = 'a'; double myDouble = 1.75;
+
+Also has explicit declaration
+var x=1, y=2; var sum = x + y;
+
+And the enums
+public enum CarType{Toyota=1, Honda=2, Ford=3} //CarType car= CarType.Toyota;
+
+Arrays
+declaration: int[] num={1,2,3}; int[] num=new int[10]; 
+Java Functions like: num.Length;
+2D array: int[,] maatrix=new int[2,2]; int[,] predefinedMatrix = new int[2,2] { { 1, 2 }, { 3, 4 } };
+Access elements: matrix[0,1];
+
+Lists: Similar as in Java
+List<int> num=new List<int>(); num.Add(1);
+Can add array to list:
+List<int> numbers = new List<int>();
+int[] array = new int[] { 1, 2, 3 };
+numbers.AddRange(arr); //arr can be list too :D
+For removing elements: Specify elements removal: fruits.Remove("banana"); Index removal: fruits.RemoveAt(1);
+
+Dictionary(like HaashMap in Java):
+Dictionary<string, long> phonebook = new Dictionary<string, long>();
+phonebook.Add("xyz",123); phonebook["xyz2"]=1234;
+Checking presence of Key: phonebook.ContainsKey("key");
+Removing: phonebook.Remove("key");
+
+String or string, no difference :P 
+string empty=String.Empty;
+Concating using "+"
+printf much?: string xyz=String.Format("{0} + {1} = {2}",x,y,sum);
+substring(start,length): string fullString = "full string"; string shorterPart = fullString.Substring(5, 3); gives "str"
+replace(old,new): name.Replace("first", "second");
+indexOf: variale.IndexOf("search"); gives pos if found or -1
+
+Loop:
+for, while: same as Java
+
+Functions:
+[Modifiers (E.G public or static)] [Type of output] [Name] ( [parameter 1],[parameter 2] ...)
+like: public static int Sum(int a, int b){return a+b;}
+Some case: int a=Foo(); void Foo(){return;} //a is set to null
+
