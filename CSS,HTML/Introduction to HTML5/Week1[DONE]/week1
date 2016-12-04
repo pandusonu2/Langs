@@ -1,0 +1,33 @@
+Syntax and Semantics
+Accessibility
+Getting Started
+
+What happens when you type an URL?
+What type of tools you need?
+What is HTML5?
+
+Read - 1,4,7,8 chapters of book
+
+tag != tag semantics
+
+Mosaic, 1993-First graphical browser
+
+Netscape(1994) Internet Explorer(1995)
+
+WHATWG-web hypertext appliction technology working group
+
+Watch later - https://www.youtube.com/watch?v=VANORrzKX50 ,  https://www.youtube.com/watch?v=-c8iWUh3Sv4&app=desktop
+
+Request response cycle
+
+client-server
+
+URL 3 parts: protocol(how to connect), domain(where to find the document), document(specific files needed)
+
+http(s) (secure) hypertext transfer protocol
+ftp file transfer protocol
+
+https://www.icann.org/resources/pages/tlds-2012-02-25-en
+
+top-level domains: .org, .com, .edu........
+
