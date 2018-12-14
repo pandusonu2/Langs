@@ -1,0 +1,67 @@
+! => macro, without it, its a function call
+
+cargo to make projects:
+- cargo new <name> --bin    // --bin is to make it executable and not a library
+cargo.toml!! TOML = Tom's Obvious Minimal Lang
+cargo bulid
+./target/debug/<name>       // Also generates Cargo.lock file
+    ^ can also use cargo run
+cargo build --release for release
+
+let : creates variables
+mut : Makes them mutable
+&   : Referencing, same as C I suppose?
+
+io::Result is enum with 'Ok' and 'Err'
+Cargo.lock ensures same item is not rebuilt
+
+if we use external dependency
+"extern crate rand;" should be added
+
+const MAX: u32 = 100_000;       // Setting constants 
+// Constants cant be set equal to function call
+
+'let' can shadow even Data Types, 'mut' can't
+
+Integers: {i,u}{8, 16, 32, 64}
+Float   : f{32, 64}
+bool    : true/false
+char    : 'A', '0',.......
+
+Tuple
+let tup: (i32, f64, u8) = (500, 6.4, 1);
+let (x, y, z) = tup;
+let five_hundred = tup.0;
+
+Arrays
+let a = [1, 2, 4, 5];
+let first = a[0];
+
+Functions
+fn func(x: i32, y: i32) { println!("{} {}", x, y); }
+calling is     func(10, 31);
+
+let y = {
+    let x = 3;
+    x + 1;
+};
+
+return functions as follows
+fn add_one(x: i32) -> i32 {
+    x + 1           // Adding ; results in statement, no return, else expression
+}
+
+If - Else
+let y = if numb < 3 { 3 } else { 1 };
+
+Looping
+loop { }
+while x > 5 { }
+let a = [3, 2, 1, 10];
+for element in a.iter { println!("{}", element); }
+for num in (1..4).rev() { println!("{}", num); }
+
+OWNERSHIP
+1) Each value in Rust has a variable that’s called its owner.
+2) There can only be one owner at a time.
+3) When the owner goes out of scope, the value will be dropped.
